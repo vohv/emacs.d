@@ -99,14 +99,14 @@
  ;; disable input method in pgtk
  pgtk-use-im-context-on-new-connection nil)
 
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 (add-hook 'prog-mode-hook 'visual-line-mode)
 (add-hook 'conf-mode-hook 'visual-line-mode)
 ;; (add-hook 'prog-mode-hook 'hl-line-mode)
 ;; (add-hook 'conf-mode-hook 'hl-line-mode)
 (add-hook 'prog-mode-hook 'subword-mode)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; kmacro keys
 (global-set-key (kbd "C-,") 'kmacro-start-macro-or-insert-counter)
